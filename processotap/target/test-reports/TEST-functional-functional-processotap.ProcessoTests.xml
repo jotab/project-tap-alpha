@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="JotaB-PC" name="processotap.ProcessoTests" tests="2" time="2.897" timestamp="2011-12-10T05:03:30">
+<testsuite errors="0" failures="1" hostname="Georgenes-PC" name="processotap.ProcessoTests" tests="5" time="3.11" timestamp="2011-12-10T05:50:45">
   <properties />
-  <testcase classname="processotap.ProcessoTests" name="testProcessoCriacao" time="2.684" />
-  <testcase classname="processotap.ProcessoTests" name="testProcessoGet" time="0.191">
-    <failure message="functionaltestplugin.FunctionalTestException: null expected:&lt;[[]]&gt; but was:&lt;[[{&quot;class&quot;:&quot;processotap.processo&quot;,&quot;id&quot;:1,&quot;autor&quot;:&quot;georgenes&quot;,&quot;decisao&quot;:&quot;procedente&quot;,&quot;descricao&quot;:&quot;oprocessotaletal&quot;,&quot;documentos&quot;:[],&quot;numero&quot;:1,&quot;reu&quot;:&quot;joaobruno&quot;}]]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: functionaltestplugin.FunctionalTestException: null expected:&lt;[[]]&gt; but was:&lt;[[{&quot;class&quot;:&quot;processotap.processo&quot;,&quot;id&quot;:1,&quot;autor&quot;:&quot;georgenes&quot;,&quot;decisao&quot;:&quot;procedente&quot;,&quot;descricao&quot;:&quot;oprocessotaletal&quot;,&quot;documentos&quot;:[],&quot;numero&quot;:1,&quot;reu&quot;:&quot;joaobruno&quot;}]]&gt;
+  <testcase classname="processotap.ProcessoTests" name="testProcessoGet" time="2.457" />
+  <testcase classname="processotap.ProcessoTests" name="testProcessoCriacao" time="0.181" />
+  <testcase classname="processotap.ProcessoTests" name="testGetProcessoApos1Criacao" time="0.141" />
+  <testcase classname="processotap.ProcessoTests" name="testGet" time="0.034" />
+  <testcase classname="processotap.ProcessoTests" name="testDocumentoCriacao" time="0.282">
+    <failure message="functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]
 	at functionaltestplugin.FunctionalTestCase.invokeMethod(FunctionalTestCase.groovy:196)
-	at processotap.ProcessoTests.testProcessoGet(ProcessoTests.groovy:11)
+	at processotap.ProcessoTests.testDocumentoCriacao(ProcessoTests.groovy:47)
 </failure>
   </testcase>
-  <system-out><![CDATA[--Output from testProcessoCriacao--
+  <system-out><![CDATA[--Output from testProcessoGet--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /processo using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/processo <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 05:50:46 GMT
+========================================
+Content
+========================================
+[]
+========================================
+
+#--Output from testProcessoCriacao--
 
 
 >>>>>>>>>>>>>>>>>>>> Making request to /processo using method POST >>>>>>>>>>>>>>>>>>>>
@@ -29,18 +59,18 @@ Response was 201 'Created', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:03:32 GMT
+Date: Sat, 10 Dec 2011 05:50:47 GMT
 ========================================
 Content
 ========================================
 {"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":null,"numero":1,"reu":"Joao Bruno"}
 ========================================
 
-#--Output from testProcessoGet--
+#--Output from testGetProcessoApos1Criacao--
 
 
->>>>>>>>>>>>>>>>>>>> Making request to /processo using method GET >>>>>>>>>>>>>>>>>>>>
-Initializing web request settings for http://localhost:8080/processotap/processo
+>>>>>>>>>>>>>>>>>>>> Making request to /processo/1 using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo/1
 Request parameters:
 ========================================
 ========================================
@@ -50,27 +80,114 @@ Accept-Language: en
 Accept: */*
 ========================================
 Content of web window [TopLevelWindow[name=""]] changed
-<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/processo <<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/processo/1 <<<<<<<<<<<<<<<<<<<<
 Response was 200 'OK', headers:
 ========================================
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:03:32 GMT
+Date: Sat, 10 Dec 2011 05:50:47 GMT
 ========================================
 Content
 ========================================
-[{"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[],"numero":1,"reu":"Joao Bruno"}]
+{"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[],"numero":1,"reu":"Joao Bruno"}
+========================================
+
+#--Output from testGet--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 05:50:47 GMT
+========================================
+Content
+========================================
+[]
+========================================
+
+#--Output from testDocumentoCriacao--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /processo/1 using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo/1
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/processo/1 <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 05:50:47 GMT
+========================================
+Content
+========================================
+{"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[],"numero":1,"reu":"Joao Bruno"}
 ========================================
 
 #
-Failed: null expected:<[[&#x5d;&#x5d;&gt; but was:<[[{"class":"processotap.processo","id":1,"autor":"georgenes","decisao":"procedente","descricao":"oprocessotaletal","documentos":[],"numero":1,"reu":"joaobruno"}&#x5d;&#x5d;&gt;
 
-Failed: null expected:<[[&#x5d;&#x5d;&gt; but was:<[[{"class":"processotap.processo","id":1,"autor":"georgenes","decisao":"procedente","descricao":"oprocessotaletal","documentos":[],"numero":1,"reu":"joaobruno"}&#x5d;&#x5d;&gt;
-URL: http://localhost:8080/processotap/processo
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method POST >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Content-Type: text/json
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from POST http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 500 'Internal Server Error', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=utf-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 05:50:47 GMT
+Connection: close
+========================================
+Content
+========================================
+Nao foi possivel criar um novo documento devido aos seguintes erros:
+ org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'processotap.Documento' on field 'processso': rejected value [null]; codes [processotap.Documento.processso.nullable.error.processotap.Documento.processso,processotap.Documento.processso.nullable.error.processso,processotap.Documento.processso.nullable.error.processotap.Processo,processotap.Documento.processso.nullable.error,documento.processso.nullable.error.processotap.Documento.processso,documento.processso.nullable.error.processso,documento.processso.nullable.error.processotap.Processo,documento.processso.nullable.error,processotap.Documento.processso.nullable.processotap.Documento.processso,processotap.Documento.processso.nullable.processso,processotap.Documento.processso.nullable.processotap.Processo,processotap.Documento.processso.nullable,documento.processso.nullable.processotap.Documento.processso,documento.processso.nullable.processso,documento.processso.nullable.processotap.Processo,documento.processso.nullable,nullable.processotap.Documento.processso,nullable.processso,nullable.processotap.Processo,nullable]; arguments [processso,class processotap.Documento]; default message [Property [{0}] of class [{1}] cannot be null]
+========================================
+
+#
+Failed: Expected HTTP status [201] but was [500]
+
+Failed: Expected HTTP status [201] but was [500]
+URL: http://localhost:8080/processotap/documento
 
 ]]></system-out>
-  <system-err><![CDATA[--Output from testProcessoCriacao--
---Output from testProcessoGet--
+  <system-err><![CDATA[--Output from testProcessoGet--
+--Output from testProcessoCriacao--
+--Output from testGetProcessoApos1Criacao--
+--Output from testGet--
+--Output from testDocumentoCriacao--
 ]]></system-err>
 </testsuite>

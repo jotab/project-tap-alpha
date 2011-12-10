@@ -52,7 +52,7 @@
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Failure">
-<td><a href="0_ProcessoTests.html" title="Display all tests">ProcessoTests</a></td><td><a href="0_ProcessoTests.html" title="Display all tests">2</a></td><td>0</td><td><a href="0_ProcessoTests-fails.html" title="Display only failures">1</a></td><td>2.897</td><td>2011-12-10T05:03:30</td><td>JotaB-PC</td>
+<td><a href="0_ProcessoTests.html" title="Display all tests">ProcessoTests</a></td><td><a href="0_ProcessoTests.html" title="Display all tests">5</a></td><td>0</td><td><a href="0_ProcessoTests-fails.html" title="Display only failures">1</a></td><td>3.110</td><td>2011-12-10T05:50:45</td><td>Georgenes-PC</td>
 </tr>
 </table>
 <h2>Tests</h2>
@@ -61,14 +61,23 @@
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testProcessoCriacao"></a>testProcessoCriacao</td><td>Success</td><td></td><td>2.684</td>
+<td><a name="testProcessoGet"></a>testProcessoGet</td><td>Success</td><td></td><td>2.457</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testProcessoCriacao"></a>testProcessoCriacao</td><td>Success</td><td></td><td>0.181</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGetProcessoApos1Criacao"></a>testGetProcessoApos1Criacao</td><td>Success</td><td></td><td>0.141</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGet"></a>testGet</td><td>Success</td><td></td><td>0.034</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testProcessoGet"></a>testProcessoGet</td><td>Failure</td><td>functionaltestplugin.FunctionalTestException: null expected:&lt;[[]]&gt; but was:&lt;[[{"class":"processotap.processo","id":1,"autor":"georgenes","decisao":"procedente","descricao":"oprocessotaletal","documentos":[],"numero":1,"reu":"joaobruno"}]]&gt;<pre>junit.framework.AssertionFailedError: functionaltestplugin.FunctionalTestException: null expected:&lt;[[]]&gt; but was:&lt;[[{"class":"processotap.processo","id":1,"autor":"georgenes","decisao":"procedente","descricao":"oprocessotaletal","documentos":[],"numero":1,"reu":"joaobruno"}]]&gt;
+<td><a name="testDocumentoCriacao"></a>testDocumentoCriacao</td><td>Failure</td><td>functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]<pre>junit.framework.AssertionFailedError: functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]
 	at functionaltestplugin.FunctionalTestCase.invokeMethod(FunctionalTestCase.groovy:196)
-	at processotap.ProcessoTests.testProcessoGet(ProcessoTests.groovy:11)
+	at processotap.ProcessoTests.testDocumentoCriacao(ProcessoTests.groovy:47)
 </pre>
-</td><td>0.191</td>
+</td><td>0.282</td>
 </tr>
 </table>
 <div class="Properties">

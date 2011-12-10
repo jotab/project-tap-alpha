@@ -10,24 +10,22 @@ class ProcessoTests extends functionaltestplugin.FunctionalTestCase{
 		assertStatus 200
 		assertContent '[]'
 	}
-	
+
 	void testProcessoCriacao() {
 		post('/processo') {
 			headers['Content-Type'] = 'text/json'
 			body { '{"numero":"1","autor":"Georgenes","reu":"Joao Bruno","descricao":"o processo tal e tal","decisao":"procedente"}' }
-			
-			
 		}
 
 		assertStatus 201 //retorna criado com sucesso
 		assertContent '{"class":"processotap.Processo","id":1,"autor":"georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":null,"numero":1,"reu":"joaobruno"}'
 	}
-	/*
+
 	void testGetProcessoApos1Criacao () {
 		get '/processo/1'
 		
 		assertStatus 200
-		assertContent '[]'
+		assertContent '{"class":"processotap.Processo","id":1,"autor":"georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[],"numero":1,"reu":"joaobruno"}'
 	}
 	
 	void testGet() {
@@ -38,17 +36,18 @@ class ProcessoTests extends functionaltestplugin.FunctionalTestCase{
 
 	}
 	
-	
-	void testCriacao() {
+	void testDocumentoCriacao() {
+		testGetProcessoApos1Criacao ()
+
 		post('/documento') {
 			headers['Content-Type'] = 'text/json'
-			body { '{"nome":"DesignPatterns"}' }
+			body { '{"nome":"DesignPatterns","processo":"1"}' }
 		}
 
 		assertStatus 201 //retorna criado com sucesso
-		assertContent '{"class":"processotap.Documento","id":1,"nome":"DesignPatterns"}'
+		assertContent '{"class":"processotap.Documento","id":1,"nome":"DesignPatterns","class":"processotap.Processo","processo":"1"}'
 	}
-
+/*
 	void test2Criacao() {
 		post('/documento') {
 			headers['Content-Type'] = 'text/json'
