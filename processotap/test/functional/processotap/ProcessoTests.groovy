@@ -10,7 +10,7 @@ class ProcessoTests extends functionaltestplugin.FunctionalTestCase{
 		assertStatus 200
 		assertContent '[]'
 	}
-
+ 
 	void testProcessoCriacao() {
 		post('/processo') {
 			headers['Content-Type'] = 'text/json'
