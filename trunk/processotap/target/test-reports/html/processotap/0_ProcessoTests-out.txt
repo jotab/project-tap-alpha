@@ -1,0 +1,409 @@
+--Output from testProcessoCriacao--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /processo using method POST >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Content-Type: text/json
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from POST http://localhost:8080/processotap/processo <<<<<<<<<<<<<<<<<<<<
+Response was 500 'Internal Server Error', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=UTF-8
+Content-Language: en
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:44 GMT
+Connection: close
+========================================
+Content
+========================================
+<html>
+  <head>
+	  <title>Grails Runtime Exception</title>
+	  <style type="text/css">
+	  		.message {
+	  			border: 1px solid black;
+	  			padding: 5px;
+	  			background-color:#E9E9E9;
+	  		}
+	  		.stack {
+	  			border: 1px solid black;
+	  			padding: 5px;
+	  			overflow:auto;
+	  			height: 300px;
+	  		}
+	  		.snippet {
+	  			padding: 5px;
+	  			background-color:white;
+	  			border:1px solid black;
+	  			margin:3px;
+	  			font-family:courier;
+	  		}
+	  </style>
+  </head>
+
+  <body>
+    <h1>Grails Runtime Exception</h1>
+    <h2>Error Details</h2>
+
+  	<div class="message">
+		<strong>Error 500:</strong> Executing action [index] of controller [processotap.ProcessoController]  caused exception: No such property: processo for class: processotap.ProcessoController<br/>
+		<strong>Servlet:</strong> grails<br/>
+		<strong>URI:</strong> /processotap/grails/processo/index.dispatch<br/>
+		
+	  		<strong>Exception Message:</strong> No such property: processo for class: processotap.ProcessoController <br />
+	  		<strong>Caused by:</strong> No such property: processo for class: processotap.ProcessoController <br />
+	  		<strong>Class:</strong> ProcessoController <br />
+	  		<strong>At Line:</strong> [10] <br />
+	  		<strong>Code Snippet:</strong><br />
+	  		<div class="snippet">
+	  			
+	  		</div>
+		
+  	</div>
+	
+	    <h2>Stack Trace</h2>
+	    <div class="stack">
+	      <pre>groovy.lang.MissingPropertyException: No such property: processo for class: processotap.ProcessoController
+<br/>	at processotap.ProcessoController.doPost(ProcessoController.groovy:27)
+<br/>	at processotap.ProcessoController.this$2$doPost(ProcessoController.groovy)
+<br/>	at processotap.ProcessoController$_closure1.doCall(ProcessoController.groovy:10)
+<br/>	at processotap.ProcessoController$_closure1.doCall(ProcessoController.groovy)
+<br/>	at java.lang.Thread.run(Thread.java:722)
+<br/></pre>
+	    </div>
+	
+  </body>
+</html>
+========================================
+
+#
+Failed: Expected HTTP status [201] but was [500]
+
+Failed: Expected HTTP status [201] but was [500]
+URL: http://localhost:8080/processotap/processo
+
+--Output from testProcessoGet--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /processo using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/processo <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+========================================
+Content
+========================================
+[]
+========================================
+
+#--Output from testAfterPostGet--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+========================================
+Content
+========================================
+[]
+========================================
+
+#
+Failed: null expected:<[[{"class":"processotap.documento","id":1,"nome":"designpatterns"},{"class":"processotap.documento","id":2,"nome":"georgenes"}&#x5d;&#x5d;&gt; but was:<[[&#x5d;&#x5d;&gt;
+
+Failed: null expected:<[[{"class":"processotap.documento","id":1,"nome":"designpatterns"},{"class":"processotap.documento","id":2,"nome":"georgenes"}&#x5d;&#x5d;&gt; but was:<[[&#x5d;&#x5d;&gt;
+URL: http://localhost:8080/processotap/documento
+
+--Output from testAfterPost2Get--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento/1 using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento/1
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/documento/1 <<<<<<<<<<<<<<<<<<<<
+Response was 404 'Not Found', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+Content-Length: 1135
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+========================================
+Content
+========================================
+<html><head><title>Apache Tomcat/6.0-snapshot - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - /processotap/WEB-INF/grails-app/views/documento/index.jsp</h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p><p><b>message</b> <u>/processotap/WEB-INF/grails-app/views/documento/index.jsp</u></p><p><b>description</b> <u>The requested resource (/processotap/WEB-INF/grails-app/views/documento/index.jsp) is not available.</u></p><HR size="1" noshade="noshade"><h3>Apache Tomcat/6.0-snapshot</h3></body></html>
+========================================
+
+#--Output from testAlteracao--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento/2 using method PUT >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento/2
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Content-Type: text/json
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from PUT http://localhost:8080/processotap/documento/2 <<<<<<<<<<<<<<<<<<<<
+Response was 500 'Internal Server Error', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=UTF-8
+Content-Language: en
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+Connection: close
+========================================
+Content
+========================================
+<html>
+  <head>
+	  <title>Grails Runtime Exception</title>
+	  <style type="text/css">
+	  		.message {
+	  			border: 1px solid black;
+	  			padding: 5px;
+	  			background-color:#E9E9E9;
+	  		}
+	  		.stack {
+	  			border: 1px solid black;
+	  			padding: 5px;
+	  			overflow:auto;
+	  			height: 300px;
+	  		}
+	  		.snippet {
+	  			padding: 5px;
+	  			background-color:white;
+	  			border:1px solid black;
+	  			margin:3px;
+	  			font-family:courier;
+	  		}
+	  </style>
+  </head>
+
+  <body>
+    <h1>Grails Runtime Exception</h1>
+    <h2>Error Details</h2>
+
+  	<div class="message">
+		<strong>Error 500:</strong> Executing action [index] of controller [processotap.DocumentoController]  caused exception: Cannot set property 'properties' on null object<br/>
+		<strong>Servlet:</strong> grails<br/>
+		<strong>URI:</strong> /processotap/grails/documento/index.dispatch<br/>
+		
+	  		<strong>Exception Message:</strong> Cannot set property 'properties' on null object <br />
+	  		<strong>Caused by:</strong> Cannot set property 'properties' on null object <br />
+	  		<strong>Class:</strong> DocumentoController <br />
+	  		<strong>At Line:</strong> [17] <br />
+	  		<strong>Code Snippet:</strong><br />
+	  		<div class="snippet">
+	  			
+	  		</div>
+		
+  	</div>
+	
+	    <h2>Stack Trace</h2>
+	    <div class="stack">
+	      <pre>java.lang.NullPointerException: Cannot set property 'properties' on null object
+<br/>	at processotap.DocumentoController.doPut(DocumentoController.groovy:49)
+<br/>	at processotap.DocumentoController.this$2$doPut(DocumentoController.groovy)
+<br/>	at processotap.DocumentoController$_closure1.doCall(DocumentoController.groovy:17)
+<br/>	at processotap.DocumentoController$_closure1.doCall(DocumentoController.groovy)
+<br/>	at java.lang.Thread.run(Thread.java:722)
+<br/></pre>
+	    </div>
+	
+  </body>
+</html>
+========================================
+
+#
+Failed: Expected HTTP status [200] but was [500]
+
+Failed: Expected HTTP status [200] but was [500]
+URL: http://localhost:8080/processotap/documento/2
+
+--Output from test2Criacao--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method POST >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Content-Type: text/json
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from POST http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 500 'Internal Server Error', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=utf-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+Connection: close
+========================================
+Content
+========================================
+N?o foi poss?vel criar um novo documento devido aos seguintes erros:
+ org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'processotap.Documento' on field 'processso': rejected value [null]; codes [processotap.Documento.processso.nullable.error.processotap.Documento.processso,processotap.Documento.processso.nullable.error.processso,processotap.Documento.processso.nullable.error.processotap.Processo,processotap.Documento.processso.nullable.error,documento.processso.nullable.error.processotap.Documento.processso,documento.processso.nullable.error.processso,documento.processso.nullable.error.processotap.Processo,documento.processso.nullable.error,processotap.Documento.processso.nullable.processotap.Documento.processso,processotap.Documento.processso.nullable.processso,processotap.Documento.processso.nullable.processotap.Processo,processotap.Documento.processso.nullable,documento.processso.nullable.processotap.Documento.processso,documento.processso.nullable.processso,documento.processso.nullable.processotap.Processo,documento.processso.nullable,nullable.processotap.Documento.processso,nullable.processso,nullable.processotap.Processo,nullable]; arguments [processso,class processotap.Documento]; default message [Property [{0}] of class [{1}] cannot be null]
+========================================
+
+#
+Failed: Expected HTTP status [201] but was [500]
+
+Failed: Expected HTTP status [201] but was [500]
+URL: http://localhost:8080/processotap/documento
+
+--Output from testCriacao--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method POST >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Content-Type: text/json
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from POST http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 500 'Internal Server Error', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=utf-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+Connection: close
+========================================
+Content
+========================================
+N?o foi poss?vel criar um novo documento devido aos seguintes erros:
+ org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'processotap.Documento' on field 'processso': rejected value [null]; codes [processotap.Documento.processso.nullable.error.processotap.Documento.processso,processotap.Documento.processso.nullable.error.processso,processotap.Documento.processso.nullable.error.processotap.Processo,processotap.Documento.processso.nullable.error,documento.processso.nullable.error.processotap.Documento.processso,documento.processso.nullable.error.processso,documento.processso.nullable.error.processotap.Processo,documento.processso.nullable.error,processotap.Documento.processso.nullable.processotap.Documento.processso,processotap.Documento.processso.nullable.processso,processotap.Documento.processso.nullable.processotap.Processo,processotap.Documento.processso.nullable,documento.processso.nullable.processotap.Documento.processso,documento.processso.nullable.processso,documento.processso.nullable.processotap.Processo,documento.processso.nullable,nullable.processotap.Documento.processso,nullable.processso,nullable.processotap.Processo,nullable]; arguments [processso,class processotap.Documento]; default message [Property [{0}] of class [{1}] cannot be null]
+========================================
+
+#
+Failed: Expected HTTP status [201] but was [500]
+
+Failed: Expected HTTP status [201] but was [500]
+URL: http://localhost:8080/processotap/documento
+
+--Output from testRemove--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento/1 using method DELETE >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento/1
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from DELETE http://localhost:8080/processotap/documento/1 <<<<<<<<<<<<<<<<<<<<
+Response was 404 'Not Found', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=utf-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+========================================
+Content
+========================================
+1 N?o encontrado.
+========================================
+
+#
+Failed: Expected HTTP status [204] but was [404]
+
+Failed: Expected HTTP status [204] but was [404]
+URL: http://localhost:8080/processotap/documento/1
+
+--Output from testGet--
+
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sat, 10 Dec 2011 04:08:46 GMT
+========================================
+Content
+========================================
+[]
+========================================
+
+#
