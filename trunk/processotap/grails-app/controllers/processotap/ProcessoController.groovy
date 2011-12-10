@@ -23,7 +23,7 @@ class ProcessoController {
                 }
         }
         private doPost() {
-                def proceso = new Processo(params)
+                def processo = new Processo(params)
                 if(processo.save()){
                         response.status = 201 // Created
 						def p = processo as JSON

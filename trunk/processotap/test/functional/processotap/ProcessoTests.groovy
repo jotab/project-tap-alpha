@@ -9,18 +9,27 @@ class ProcessoTests extends functionaltestplugin.FunctionalTestCase{
 		
 		assertStatus 200
 		assertContent '[]'
-
 	}
+	
 	void testProcessoCriacao() {
 		post('/processo') {
 			headers['Content-Type'] = 'text/json'
 			body { '{"numero":"1","autor":"Georgenes","reu":"Joao Bruno","descricao":"o processo tal e tal","decisao":"procedente"}' }
+			
+			
 		}
 
 		assertStatus 201 //retorna criado com sucesso
-		assertContent '{"class":"processotap.Documento","id":1,"nome":"DesignPatterns"}'
+		assertContent '{"class":"processotap.Processo","id":1,"autor":"georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":null,"numero":1,"reu":"joaobruno"}'
 	}
-
+	/*
+	void testGetProcessoApos1Criacao () {
+		get '/processo/1'
+		
+		assertStatus 200
+		assertContent '[]'
+	}
+	
 	void testGet() {
 		get '/documento'
 		
@@ -28,6 +37,8 @@ class ProcessoTests extends functionaltestplugin.FunctionalTestCase{
 		assertContent '[]'
 
 	}
+	
+	
 	void testCriacao() {
 		post('/documento') {
 			headers['Content-Type'] = 'text/json'
@@ -78,5 +89,5 @@ class ProcessoTests extends functionaltestplugin.FunctionalTestCase{
 
 		assertStatus 200 //retorna criado com sucesso
 		assertContent '{"class":"processotap.Documento","id":2,"nome":"Joao"}'
-	}
+	}*/
 }
