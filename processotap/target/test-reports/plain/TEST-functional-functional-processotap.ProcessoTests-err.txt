@@ -1,9 +1,2 @@
 --Output from testProcessoCriacao--
 --Output from testProcessoGet--
---Output from testAfterPostGet--
---Output from testAfterPost2Get--
---Output from testAlteracao--
---Output from test2Criacao--
---Output from testCriacao--
---Output from testRemove--
---Output from testGet--
