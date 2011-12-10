@@ -1,3 +1,6 @@
---Output from testProcessoCriacao--
 --Output from testProcessoGet--
+--Output from testProcessoCriacao--
+--Output from testGetProcessoApos1Criacao--
+--Output from testGet--
+--Output from testDocumentoCriacao--
 
