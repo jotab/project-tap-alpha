@@ -1,7 +1,7 @@
 package processotap
 
 class Processo {
-	
+	 
 		long numero
 		String autor
 		String reu
