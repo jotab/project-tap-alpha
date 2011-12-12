@@ -1,5 +1,5 @@
 Testsuite: processotap.ProcessoTests
-Tests run: 5, Failures: 1, Errors: 0, Time elapsed: 3,11 sec
+Tests run: 5, Failures: 1, Errors: 0, Time elapsed: 8,142 sec
 ------------- Standard Output ---------------
 --Output from testProcessoGet--
 
@@ -21,7 +21,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:46 GMT
+Date: Mon, 12 Dec 2011 02:26:18 GMT
 ========================================
 Content
 ========================================
@@ -49,7 +49,7 @@ Response was 201 'Created', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -76,7 +76,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -103,7 +103,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -130,7 +130,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -157,7 +157,7 @@ Response was 500 'Internal Server Error', headers:
 Server: Apache-Coyote/1.1
 Content-Type: text/html;charset=utf-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 Connection: close
 ========================================
 Content
@@ -182,11 +182,11 @@ URL: http://localhost:8080/processotap/documento
 --Output from testDocumentoCriacao--
 ------------- ---------------- ---------------
 
-Testcase: testProcessoGet took 2,457 sec
-Testcase: testProcessoCriacao took 0,181 sec
-Testcase: testGetProcessoApos1Criacao took 0,141 sec
-Testcase: testGet took 0,034 sec
-Testcase: testDocumentoCriacao took 0,281 sec
+Testcase: testProcessoGet took 5,736 sec
+Testcase: testProcessoCriacao took 0,674 sec
+Testcase: testGetProcessoApos1Criacao took 0,176 sec
+Testcase: testGet took 0,118 sec
+Testcase: testDocumentoCriacao took 1,409 sec
 	FAILED
 functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]
 junit.framework.AssertionFailedError: functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]
