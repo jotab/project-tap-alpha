@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="1" hostname="Georgenes-PC" id="0" name="ProcessoTests" package="processotap" tests="5" time="3.11" timestamp="2011-12-10T05:50:45">
+  <testsuite errors="0" failures="1" hostname="Georgenes-PC" id="0" name="ProcessoTests" package="processotap" tests="5" time="8.142" timestamp="2011-12-12T02:26:13">
       <properties />
 
-      <testcase classname="processotap.ProcessoTests" name="testProcessoGet" time="2.457" />
+      <testcase classname="processotap.ProcessoTests" name="testProcessoGet" time="5.736" />
 
-      <testcase classname="processotap.ProcessoTests" name="testProcessoCriacao" time="0.181" />
+      <testcase classname="processotap.ProcessoTests" name="testProcessoCriacao" time="0.674" />
 
-      <testcase classname="processotap.ProcessoTests" name="testGetProcessoApos1Criacao" time="0.141" />
+      <testcase classname="processotap.ProcessoTests" name="testGetProcessoApos1Criacao" time="0.176" />
 
-      <testcase classname="processotap.ProcessoTests" name="testGet" time="0.034" />
+      <testcase classname="processotap.ProcessoTests" name="testGet" time="0.118" />
 
-      <testcase classname="processotap.ProcessoTests" name="testDocumentoCriacao" time="0.282">
+      <testcase classname="processotap.ProcessoTests" name="testDocumentoCriacao" time="1.409">
           <failure message="functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]
 	at functionaltestplugin.FunctionalTestCase.invokeMethod(FunctionalTestCase.groovy:196)
 	at processotap.ProcessoTests.testDocumentoCriacao(ProcessoTests.groovy:47)
@@ -39,7 +39,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:46 GMT
+Date: Mon, 12 Dec 2011 02:26:18 GMT
 ========================================
 Content
 ========================================
@@ -67,7 +67,7 @@ Response was 201 'Created', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -94,7 +94,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -121,7 +121,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -148,7 +148,7 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 ========================================
 Content
 ========================================
@@ -175,7 +175,7 @@ Response was 500 'Internal Server Error', headers:
 Server: Apache-Coyote/1.1
 Content-Type: text/html;charset=utf-8
 Transfer-Encoding: chunked
-Date: Sat, 10 Dec 2011 05:50:47 GMT
+Date: Mon, 12 Dec 2011 02:26:19 GMT
 Connection: close
 ========================================
 Content
