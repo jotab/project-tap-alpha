@@ -23,7 +23,13 @@ class DocumentoController {
 		}
 	}
 	private doPost() {
+		def idProcesso = params.idProcesso
+		def processo = Processo.findById(idProcesso)
+		
 		def documento = new Documento(params)
+		documento.processo = processo
+		processo.documentos.add(documento)
+
 		if(documento.save()){
 			response.status = 201 // Created
 			def s = documento as JSON
@@ -37,7 +43,7 @@ class DocumentoController {
 		if(params.chave) {
 			def d = Documento.findById(params.chave)
 			if (d) {
-				render  as JSON
+				render d as JSON
 			}
 		} else {
 			render Documento.list() as JSON
@@ -52,7 +58,7 @@ class DocumentoController {
 			render documento as JSON
 		} else{
 			response.status = 500 //Internal Server Error
-			render "N�o foi poss�vel editar o documento devido aos seguintes erros:\n ${documento.errors}"
+			render "Nao foi possivel editar o documento devido aos seguintes erros:\n ${documento.errors}"
 		}
 	}
 	private doDelete() {
@@ -61,16 +67,16 @@ class DocumentoController {
 			if(documento) {
 				documento.delete()
 				response.status = 204 // No content
-				render 'removido'
+				//render 'removido'
 			} else {
 				response.status = 404 //Not Found
-				render "${params.chave} N�o encontrado."
+				//render "${params.chave} Nao encontrado."
 			}
 		} else {
 			response.status = 400 //Bad Request
-			render """A requisi��o DELETE deve incluir o nome do documento
-                                                  Exemplo: /documento/
-                                """
+			//render """A requisicao DELETE deve incluir o nome do documento
+            //                                      Exemplo: /documento/
+            //                    """
 		}
 	}
 }

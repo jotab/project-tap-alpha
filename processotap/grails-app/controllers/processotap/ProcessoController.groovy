@@ -30,7 +30,7 @@ class ProcessoController {
 			render p
 		} else {
 			response.status = 500 //Internal Server Error
-			render "N�o foi poss�vel criar um novo processo devido aos seguintes erros:\n ${processo.errors}"
+			render "Nao foi possivel criar um novo processo devido aos seguintes erros:\n ${processo.errors}"
 		}
 	}
 	private doGet() {
@@ -55,18 +55,18 @@ class ProcessoController {
 	}
 	private doDelete() {
 		if(params.chave) {
-			def documento = Processo.findById(params.chave)
+			def processo = Processo.findById(params.chave)
 			if(processo) {
 				processo.delete()
 				response.status = 204 // No content
 				render "Removido com sucesso."
 			} else {
 				response.status = 404 //Not Found
-				render "${params.chave} N�o encontrado."
+				render "${params.chave} Nao encontrado."
 			}
 		} else {
 			response.status = 400 //Bad Request
-			render """A requisi��o DELETE deve incluir o n�mero do processo
+			render """A requisicao DELETE deve incluir o n�mero do processo
                                                   Exemplo: /
                                 """
 		}

@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="Georgenes-PC" name="processotap.ProcessoTests" tests="5" time="8.142" timestamp="2011-12-12T02:26:13">
+<testsuite errors="0" failures="0" hostname="Georgenes-PC" name="processotap.ProcessoTests" tests="1" time="2.362" timestamp="2011-12-13T04:27:57">
   <properties />
-  <testcase classname="processotap.ProcessoTests" name="testProcessoGet" time="5.736" />
-  <testcase classname="processotap.ProcessoTests" name="testProcessoCriacao" time="0.674" />
-  <testcase classname="processotap.ProcessoTests" name="testGetProcessoApos1Criacao" time="0.176" />
-  <testcase classname="processotap.ProcessoTests" name="testGet" time="0.118" />
-  <testcase classname="processotap.ProcessoTests" name="testDocumentoCriacao" time="1.409">
-    <failure message="functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: functionaltestplugin.FunctionalTestException: Expected HTTP status [201] but was [500]
-	at functionaltestplugin.FunctionalTestCase.invokeMethod(FunctionalTestCase.groovy:196)
-	at processotap.ProcessoTests.testDocumentoCriacao(ProcessoTests.groovy:47)
-</failure>
-  </testcase>
-  <system-out><![CDATA[--Output from testProcessoGet--
+  <testcase classname="processotap.ProcessoTests" name="testCompleto" time="2.349" />
+  <system-out><![CDATA[--Output from testCompleto--
 
 
 >>>>>>>>>>>>>>>>>>>> Making request to /processo using method GET >>>>>>>>>>>>>>>>>>>>
@@ -31,15 +22,40 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Mon, 12 Dec 2011 02:26:18 GMT
+Date: Tue, 13 Dec 2011 04:27:59 GMT
 ========================================
 Content
 ========================================
 []
 ========================================
 
-#--Output from testProcessoCriacao--
+#
 
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Tue, 13 Dec 2011 04:27:59 GMT
+========================================
+Content
+========================================
+[]
+========================================
+
+#
 
 >>>>>>>>>>>>>>>>>>>> Making request to /processo using method POST >>>>>>>>>>>>>>>>>>>>
 Initializing web request settings for http://localhost:8080/processotap/processo
@@ -59,15 +75,41 @@ Response was 201 'Created', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Mon, 12 Dec 2011 02:26:19 GMT
+Date: Tue, 13 Dec 2011 04:27:59 GMT
 ========================================
 Content
 ========================================
 {"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":null,"numero":1,"reu":"Joao Bruno"}
 ========================================
 
-#--Output from testGetProcessoApos1Criacao--
+#
 
+>>>>>>>>>>>>>>>>>>>> Making request to /documento using method POST >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Content-Type: text/json
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from POST http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
+Response was 201 'Created', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Tue, 13 Dec 2011 04:27:59 GMT
+========================================
+Content
+========================================
+{"class":"processotap.Documento","id":1,"nome":"DesignPatterns","processo":{"class":"Processo","id":1}}
+========================================
+
+#
 
 >>>>>>>>>>>>>>>>>>>> Making request to /processo/1 using method GET >>>>>>>>>>>>>>>>>>>>
 Initializing web request settings for http://localhost:8080/processotap/processo/1
@@ -86,15 +128,66 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Mon, 12 Dec 2011 02:26:19 GMT
+Date: Tue, 13 Dec 2011 04:27:59 GMT
 ========================================
 Content
 ========================================
-{"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[],"numero":1,"reu":"Joao Bruno"}
+{"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[{"class":"Documento","id":1}],"numero":1,"reu":"Joao Bruno"}
 ========================================
 
-#--Output from testGet--
+#
 
+>>>>>>>>>>>>>>>>>>>> Making request to /processo using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/processo <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Tue, 13 Dec 2011 04:27:59 GMT
+========================================
+Content
+========================================
+[{"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[{"class":"Documento","id":1}],"numero":1,"reu":"Joao Bruno"}]
+========================================
+
+#
+
+>>>>>>>>>>>>>>>>>>>> Making request to /documento/1 using method GET >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento/1
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/documento/1 <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Tue, 13 Dec 2011 04:27:59 GMT
+========================================
+Content
+========================================
+{"class":"processotap.Documento","id":1,"nome":"DesignPatterns","processo":{"class":"Processo","id":1}}
+========================================
+
+#
 
 >>>>>>>>>>>>>>>>>>>> Making request to /documento using method GET >>>>>>>>>>>>>>>>>>>>
 Initializing web request settings for http://localhost:8080/processotap/documento
@@ -113,44 +206,17 @@ Response was 200 'OK', headers:
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Mon, 12 Dec 2011 02:26:19 GMT
+Date: Tue, 13 Dec 2011 04:27:59 GMT
 ========================================
 Content
 ========================================
-[]
-========================================
-
-#--Output from testDocumentoCriacao--
-
-
->>>>>>>>>>>>>>>>>>>> Making request to /processo/1 using method GET >>>>>>>>>>>>>>>>>>>>
-Initializing web request settings for http://localhost:8080/processotap/processo/1
-Request parameters:
-========================================
-========================================
-Request headers:
-========================================
-Accept-Language: en
-Accept: */*
-========================================
-Content of web window [TopLevelWindow[name=""]] changed
-<<<<<<<<<<<<<<<<<<<< Received response from GET http://localhost:8080/processotap/processo/1 <<<<<<<<<<<<<<<<<<<<
-Response was 200 'OK', headers:
-========================================
-Server: Apache-Coyote/1.1
-Content-Type: application/json;charset=UTF-8
-Transfer-Encoding: chunked
-Date: Mon, 12 Dec 2011 02:26:19 GMT
-========================================
-Content
-========================================
-{"class":"processotap.Processo","id":1,"autor":"Georgenes","decisao":"procedente","descricao":"o processo tal e tal","documentos":[],"numero":1,"reu":"Joao Bruno"}
+[{"class":"processotap.Documento","id":1,"nome":"DesignPatterns","processo":{"class":"Processo","id":1}}]
 ========================================
 
 #
 
->>>>>>>>>>>>>>>>>>>> Making request to /documento using method POST >>>>>>>>>>>>>>>>>>>>
-Initializing web request settings for http://localhost:8080/processotap/documento
+>>>>>>>>>>>>>>>>>>>> Making request to /documento/1 using method PUT >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/documento/1
 Request parameters:
 ========================================
 ========================================
@@ -161,33 +227,71 @@ Content-Type: text/json
 Accept: */*
 ========================================
 Content of web window [TopLevelWindow[name=""]] changed
-<<<<<<<<<<<<<<<<<<<< Received response from POST http://localhost:8080/processotap/documento <<<<<<<<<<<<<<<<<<<<
-Response was 500 'Internal Server Error', headers:
+<<<<<<<<<<<<<<<<<<<< Received response from PUT http://localhost:8080/processotap/documento/1 <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
 ========================================
 Server: Apache-Coyote/1.1
-Content-Type: text/html;charset=utf-8
+Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Mon, 12 Dec 2011 02:26:19 GMT
-Connection: close
+Date: Tue, 13 Dec 2011 04:28:00 GMT
 ========================================
 Content
 ========================================
-Nao foi possivel criar um novo documento devido aos seguintes erros:
- org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'processotap.Documento' on field 'processso': rejected value [null]; codes [processotap.Documento.processso.nullable.error.processotap.Documento.processso,processotap.Documento.processso.nullable.error.processso,processotap.Documento.processso.nullable.error.processotap.Processo,processotap.Documento.processso.nullable.error,documento.processso.nullable.error.processotap.Documento.processso,documento.processso.nullable.error.processso,documento.processso.nullable.error.processotap.Processo,documento.processso.nullable.error,processotap.Documento.processso.nullable.processotap.Documento.processso,processotap.Documento.processso.nullable.processso,processotap.Documento.processso.nullable.processotap.Processo,processotap.Documento.processso.nullable,documento.processso.nullable.processotap.Documento.processso,documento.processso.nullable.processso,documento.processso.nullable.processotap.Processo,documento.processso.nullable,nullable.processotap.Documento.processso,nullable.processso,nullable.processotap.Processo,nullable]; arguments [processso,class processotap.Documento]; default message [Property [{0}] of class [{1}] cannot be null]
+{"class":"processotap.Documento","id":1,"nome":"Joao","processo":{"class":"Processo","id":1}}
 ========================================
 
 #
-Failed: Expected HTTP status [201] but was [500]
 
-Failed: Expected HTTP status [201] but was [500]
-URL: http://localhost:8080/processotap/documento
+>>>>>>>>>>>>>>>>>>>> Making request to /processo/1 using method PUT >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo/1
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Content-Type: text/json
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from PUT http://localhost:8080/processotap/processo/1 <<<<<<<<<<<<<<<<<<<<
+Response was 200 'OK', headers:
+========================================
+Server: Apache-Coyote/1.1
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Tue, 13 Dec 2011 04:28:00 GMT
+========================================
+Content
+========================================
+{"class":"processotap.Processo","id":1,"autor":"nome alterado","decisao":"procedente","descricao":"processo alterado","documentos":[{"class":"Documento","id":1}],"numero":1,"reu":"nome do reu alterado"}
+========================================
 
-]]></system-out>
-  <system-err><![CDATA[--Output from testProcessoGet--
---Output from testProcessoCriacao--
---Output from testGetProcessoApos1Criacao--
---Output from testGet--
---Output from testDocumentoCriacao--
+#
+
+>>>>>>>>>>>>>>>>>>>> Making request to /processo/1 using method DELETE >>>>>>>>>>>>>>>>>>>>
+Initializing web request settings for http://localhost:8080/processotap/processo/1
+Request parameters:
+========================================
+========================================
+Request headers:
+========================================
+Accept-Language: en
+Accept: */*
+========================================
+Content of web window [TopLevelWindow[name=""]] changed
+<<<<<<<<<<<<<<<<<<<< Received response from DELETE http://localhost:8080/processotap/processo/1 <<<<<<<<<<<<<<<<<<<<
+Response was 204 'No Content', headers:
+========================================
+Server: Apache-Coyote/1.1
+Date: Tue, 13 Dec 2011 04:28:00 GMT
+========================================
+Content
+========================================
+null
+========================================
+
+#]]></system-out>
+  <system-err><![CDATA[--Output from testCompleto--
 ]]></system-err>
 </testsuite>
