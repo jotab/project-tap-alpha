@@ -1,7 +1,8 @@
-#Sat Dec 10 00:51:12 GMT-03:00 2011
+#Tue Dec 13 00:57:38 GMT-03:00 2011
 eclipse.preferences.version=1
 encoding//.link_to_grails_plugins/functional-test-1.2.7/grails-app/i18n=UTF-8
 encoding//.link_to_grails_plugins/functional-test-1.2.7/grails-app/i18n/messages.properties=UTF-8
+encoding//grails-app/controllers/processotap/DocumentoController.groovy=UTF-8
 encoding//grails-app/i18n=UTF-8
 encoding//grails-app/i18n/messages.properties=UTF-8
 encoding//grails-app/i18n/messages_da.properties=UTF-8

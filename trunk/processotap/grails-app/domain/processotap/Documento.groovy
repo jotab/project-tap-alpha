@@ -3,7 +3,7 @@ package processotap
 class Documento {
  
 	String nome
-	static belongsTo = [processso: Processo]
+	static belongsTo = [processo: Processo]
 	
     static constraints = {
 		nome(nullable: false, blank: false)
